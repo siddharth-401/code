@@ -1,0 +1,16 @@
+version: "3.1"
+services: 
+   jen: 
+      image: jenkins/jenkins
+      ports: 
+        - "808:8080"
+      networks: 
+        - mnet
+      volumes: 
+        - raj:/root/app/
+
+volumes: 
+  raj:
+networks:
+  mnet:
+   driver: bridge
